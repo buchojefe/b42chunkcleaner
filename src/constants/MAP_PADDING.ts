@@ -1,1 +1,1 @@
-export const MAP_PADDING = -13;
+export const MAP_PADDING = 0;
