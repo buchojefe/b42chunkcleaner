@@ -20,7 +20,7 @@ export const deleteMapData = async (
         const mapSubdirectoryHandle = await directoryHandle.getDirectoryHandle('map');
         const done = Promise.all(
             filesToDelete.map((file) => mapSubdirectoryHandle.removeEntry(file))
-        );
+        ).then(() => {}); // Add this .then
         return [pointsToKeep, done];
     } catch (error) {
         console.error("Error al eliminar archivos:", error);
