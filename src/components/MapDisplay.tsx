@@ -335,8 +335,8 @@ export const MapDisplay: React.FC = () => {
                     >
                         <div
                             style={{
-                                marginLeft: zoomLevel * -(tileInfo.minX % 32) * scaleFactor,
-                                marginTop: zoomLevel * -(tileInfo.minY % 32) * scaleFactor,
+                                marginLeft: zoomLevel * -(tileInfo.minX % 32) * scaleFactor + 16,
+                                marginTop: zoomLevel * -(tileInfo.minY % 32) * scaleFactor + 28,
                                 display: 'grid',
                                 gridTemplateColumns: `repeat(${tileInfo.columnCount}, ${zoomLevel * 64}px)`,
                                 zIndex: 0
